@@ -1,3 +1,4 @@
+'use client';
 import * as RdxTabs from '@radix-ui/react-tabs';
 import { cn } from '@/app/utils/cn';
 import { ReactNode } from 'react';

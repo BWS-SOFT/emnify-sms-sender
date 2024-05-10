@@ -1,3 +1,4 @@
+'use client';
 import { Listbox } from '@headlessui/react';
 import { XCircleIcon } from '@heroicons/react/24/outline';
 

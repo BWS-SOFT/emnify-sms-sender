@@ -1,3 +1,4 @@
+'use client';
 import { TableCellsIcon } from '@heroicons/react/24/solid';
 import { cn } from '@/app/utils/cn';
 

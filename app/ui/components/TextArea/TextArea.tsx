@@ -1,3 +1,4 @@
+'use client';
 import { ComponentProps, ReactNode, forwardRef } from 'react';
 import { XCircleIcon } from '@heroicons/react/24/outline';
 import { cn } from '@/app/utils/cn';

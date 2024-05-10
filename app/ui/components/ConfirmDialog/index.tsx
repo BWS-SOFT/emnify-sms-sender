@@ -1,3 +1,4 @@
+'use client';
 import { ReactNode } from 'react';
 import { Dialog, DialogContent, DialogHeader } from '../@composition/Dialog';
 import { Button } from '../Button';
@@ -11,7 +12,7 @@ export type ConfirmDialogProps = {
 	title?: string;
 	children?: ReactNode;
 	isLoading?: boolean;
-	id?: string
+	id?: string;
 };
 
 export function ConfirmDialog({

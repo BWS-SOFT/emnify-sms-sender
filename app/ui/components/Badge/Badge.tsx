@@ -1,3 +1,4 @@
+'use client';
 import { cn } from '@/app/utils/cn';
 
 import { tv, VariantProps } from 'tailwind-variants';

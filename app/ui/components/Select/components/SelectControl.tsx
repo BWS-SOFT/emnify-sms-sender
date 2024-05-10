@@ -95,13 +95,13 @@ export function SelectControl<T>({
 								<Badge
 									label={getOptionText(option)}
 									key={keyExtractor(option)}
-									isRemoved={multiSelect}
+									// isRemoved={multiSelect}
 									iconAction={() => multiSelect && onRemove(option)}
 									theme="default"
 									className="mr-2 whitespace-nowrap"
 								/>
 							) : (
-								<p>{getOptionText(option)}</p>
+								<p key={keyExtractor(option)}>{getOptionText(option)}</p>
 							),
 						)}
 
