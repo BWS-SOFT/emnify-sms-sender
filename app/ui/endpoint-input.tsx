@@ -107,6 +107,7 @@ export default function EndpointsInput({ simcards }: EndpointsInputProps) {
 				>
 					<EndpointsSearchBar
 						placeholder={'Pesquise por um simcard'}
+						selectClassName="w-32"
 						fieldsForSearch={[
 							{
 								field: 'endpoint_name',

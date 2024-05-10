@@ -7,15 +7,18 @@ import { Input } from './components/@composition/Input';
 import { Input as Fake } from './components/Input';
 import { Select } from './components/Select';
 import { useCallback } from 'react';
+import { cn } from '../utils/cn';
 
 export default function EndpointsSearchBar({
 	placeholder,
 	conatinerClassname,
 	fieldsForSearch = [],
+	selectClassName,
 }: {
 	placeholder: string;
 	conatinerClassname?: string;
 	fieldsForSearch?: Array<{ label: string; field: string }>;
+	selectClassName?: string;
 }) {
 	const searchParams = useSearchParams();
 	const pathname = usePathname();
@@ -70,7 +73,10 @@ export default function EndpointsSearchBar({
 				<Select
 					data={fieldsForSearch}
 					input={{
-						className: 'h-full bg-gray-100 rounded-none border-0 ring-0 w-40',
+						className: cn(
+							'h-full bg-gray-100 rounded-none border-0 ring-0 w-40',
+							selectClassName,
+						),
 					}}
 					className="h-full"
 					getOptionText={(option) => option.label}

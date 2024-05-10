@@ -22,6 +22,7 @@ export default async function Example({
 				<div className="flex flex-col">
 					<EndpointsSearchBar
 						placeholder="Pesquise pelo endpoint."
+						selectClassName="w-auto"
 						fieldsForSearch={[
 							{
 								field: 'endpoint_name',
