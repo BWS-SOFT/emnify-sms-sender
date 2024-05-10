@@ -67,7 +67,7 @@ export function SelectControl<T>({
 	);
 
 	return (
-		<div>
+		<>
 			<div
 				onClick={() => !multiSelect && !readOnly && onChevronIconClick()}
 				ref={measuredWrapperRef}
@@ -196,6 +196,6 @@ export function SelectControl<T>({
 					</Listbox.Options>
 				)}
 			</Transition>
-		</div>
+		</>
 	);
 }
