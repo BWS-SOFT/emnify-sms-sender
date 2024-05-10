@@ -1,8 +1,10 @@
 import { changeUserPassword } from "@/app/lib/actions";
 import { Breadcrumbs } from "@/app/ui/breadcrumbs";
-import { Button } from "@/app/ui/button";
+import { Button } from "@/app/ui/components/Button/Button";
+import { Input } from "@/app/ui/components/Input";
 
 export default function Profile() {
+
     return (
         <div className="min-h-full">
             <div className="flex flex-col">
@@ -28,38 +30,10 @@ export default function Profile() {
                         </p>
                     </div>
 
-                    <div className="grid grid-rows-3 col-span-1 gap-x-6 gap-y-4 sm:grid-cols-6 md:col-span-2">
-                        <div className="col-span-full">
-                            <label
-                                htmlFor="new_password"
-                                className="block text-sm font-medium leading-6 text-gray-900"
-                            >
-                                Nova senha
-                            </label>
-                            <div className="mt-2">
-                                <input
-                                    type="password"
-                                    name="new_password"
-                                    id="new_password"
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                />
-                            </div>
-                        </div>
-                        <div className="col-span-full">
-                            <label
-                                htmlFor="confirm_new_password"
-                                className="block text-sm font-medium leading-6 text-gray-900"
-                            >
-                                Confirmar nova senha
-                            </label>
-                            <div className="mt-2">
-                                <input
-                                    type="password"
-                                    name="confirm_new_password"
-                                    id="confirm_new_password"
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                />
-                            </div>
+                    <div className="grid grid-rows-3 col-span-1 gap-x-6 gap-y-4 sm:grid-cols-6 md:col-span-2 w-full h-fit">
+                        <div className="col-span-full gap-y-3 h-[70%]">
+                            <Input label="Nova senha"  type="password" id="new_password" name="new_password" />
+                            <Input label="Confirmar nova senha"  type="password" id="confirm_new_password" name="confirm_new_password"/>
                         </div>
 
                         <div className="flex w-full col-span-full items-center justify-end gap-6">

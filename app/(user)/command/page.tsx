@@ -1,7 +1,7 @@
 import { listCommandsfromComandPage } from "@/app/lib/actions";
 import { Breadcrumbs } from "@/app/ui/breadcrumbs";
-import { Button } from "@/app/ui/button";
 import CommandsList from "@/app/ui/commands-list";
+import { Button } from "@/app/ui/components/Button/Button";
 import EndpointsSearchBar from "@/app/ui/endpoint-search-bar";
 import Link from "next/link";
 import React from "react";
@@ -51,7 +51,7 @@ const Command: React.FC = async ({
                     />
                     <div className="flex w-full items-center justify-end px-6">
                         <Link href={"/command/create"}>
-                            <Button className="bg-indigo-500 hover:bg-indigo-400 transition-colors text-white rounded-md text-sm shadow-md p-2">
+                            <Button >
                                 Cadastrar Comando
                             </Button>
                         </Link>

@@ -4,7 +4,7 @@ import { PlusCircleIcon } from '@heroicons/react/20/solid';
 import React, { useRef } from 'react';
 import { useVariables } from "./useVariables";
 import { Tooltip } from '@radix-ui/themes';
-import { Button } from '@/app/ui/button';
+import { Button } from '@/app/ui/components/Button/Button';
 
 export type IVariableSchema = {
 	name: string;
@@ -57,7 +57,7 @@ const Variables: React.FC<IVariablesType> = (data) => {
                     <div className="flex w-full justify-end">
                         <Button
                             type="submit"
-                            className="inline-flex items-center gap-x-2 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                            className="inline-flex items-center gap-x-2 "
                         >
                             <PlusCircleIcon
                                 className="-ml-0.5 h-5 w-5"

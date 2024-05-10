@@ -11,7 +11,7 @@ import { Controller } from 'react-hook-form';
 import ModalPreview from './components/ModalPreview';
 import { CommandFormProvider } from './context';
 import LoadingCommand from './components/LoadingCommand';
-import { Button } from '../../button';
+import { Button } from '../../components/Button/Button';
 
 const Form: React.FC = () => {
 	const { onHandleSubmit, watch, control, getValues, register, errors, state } =
@@ -123,17 +123,17 @@ const Form: React.FC = () => {
 				</div>
 			</div>
 			<div className="flex w-full  justify-end my-4 py-4">
-				<button
+				<Button
 					form="commandForm"
 					type="submit"
-					className=" items-center gap-x-2 rounded-md bg-indigo-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+					className="items-center gap-x-2 rounded-md"
 				>
 					{isReadOnly
 						? 'Visualizar'
 						: getValues('_id')
 						? 'Atualizar'
 						: 'Cadastrar'}
-				</button>
+				</Button>
 			</div>
 			<ModalPreview />
 		</div>

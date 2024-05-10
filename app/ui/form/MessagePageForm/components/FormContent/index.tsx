@@ -18,7 +18,7 @@ const FormContent: React.FC<IFormContentType> = ({ action, commands }) => {
 
 	return (
 		<form
-			className=" pl-4 flex gap-4 z-[999] overflow-hidden w-full items-end flex-grow mb-3 pr-4"
+			className=" pl-4 flex gap-4 z-[999] overflow-hidden w-full  items-end flex-grow mb-3 pr-4"
 			action={async (formData) => {
 				await action(formData);
 				resetField('payload');
