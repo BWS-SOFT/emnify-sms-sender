@@ -1,6 +1,8 @@
+'use client';
 import { ChevronRightIcon } from '@heroicons/react/20/solid';
 import { BreadcrumbPage } from '../Breadcrumbs';
 import { Button } from '../../../Button';
+import { RedirectType, usePathname, useRouter } from 'next/navigation';
 
 interface Props {
 	page: Omit<BreadcrumbPage, 'name'> & {
@@ -10,16 +12,19 @@ interface Props {
 }
 
 export function BreadcrumbLink({ page, lastChild }: Props) {
+	const route = useRouter();
 	function handleRedirect() {
-		console.log('Handle redirect', page.href);
+		page.onClick?.();
+		route.push(page.href as string);
 	}
+
+	const path = usePathname();
 
 	return (
 		<li
 			key={page.name}
 			className={`text-gray-500 transition-all ${
-				!(window.location.pathname === page.href) &&
-				'hover:text-gray-700 cursor-pointer group'
+				!(path === page.href) && 'hover:text-gray-700 cursor-pointer group'
 			}`}
 			onClick={handleRedirect}
 		>
@@ -33,9 +38,9 @@ export function BreadcrumbLink({ page, lastChild }: Props) {
 							className={`
 								p-0 text-gray-500 enabled:group-hover:text-gray-700 
 								bg-transparent hover:!bg-transparent shadow-none
-								${window.location.pathname === page.href && 'text-gray-800'}
+								${path === page.href && 'text-gray-800'}
 							`}
-							disabled={window.location.pathname === page.href}
+							disabled={path === page.href}
 						>
 							{page.name}
 						</Button>

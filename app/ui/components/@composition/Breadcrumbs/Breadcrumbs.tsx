@@ -6,8 +6,9 @@ import { BreadcrumbLink } from './components/BreadcrumbLink';
 
 export interface BreadcrumbPage {
 	name: string;
-	href: string;
+	href?: string;
 	icon?: ReactNode;
+	onClick?: () => void;
 }
 
 interface Props {
